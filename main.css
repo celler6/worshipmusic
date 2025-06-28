@@ -7,26 +7,37 @@ body{
 	background: url("images/MCC.png") no-repeat fixed top left; 
 	}
 #container{
-	width: 800px;
+	width: 1342px;
 	 Margin:0 auto;
 }
 .left {
-	width:380px;
-	height: 500px;
+	width:424px;
+	height: 422px;
 	background-color: gray;
 	border-radius: 25px;
 	float: left;
-	margin: 0px 10px 10px 15px;
+	margin: 0px 10px 100px 15px;
+	padding: 30px 30px 30px 30px;
+	border: thick black solid;
+}
+
+.center{
+	width:429px;
+	height: 422px;
+	background-color:gray;
+	border-radius: 25px;
+	float: inherit;
+	margin: 60px 200px 300px 461px;
 	padding: 30px 30px 30px 30px;
 	border: thick black solid;
 }
 .right{
-	width:380px;
-	height: 200px;
+	width:424px;
+	height: 422px;
 	background-color:gray;
 	border-radius: 25px;
-	float: left;
-	margin: 0px 0px 10px 0px;
+	float: right;
+	margin: -721px 0px 0px 0px;
 	padding: 30px 30px 30px 30px;
 	border: thick black solid;
 	
@@ -59,4 +70,38 @@ footer a:link{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+/*nav bar*/
+nav{
+	Margin: 0px 10px 20px 10px
+}
+nav ul {
+  list-style-type: none;
+  margin: 65px 0px 0px -300px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
 }
