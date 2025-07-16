@@ -5,44 +5,158 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <meta charset="utf-8">
+	<style>
+.flex-container, .flex-row {
+      display: flex;
+      background-color: darkgray;
+      height: 100px;
+      margin: 20px 0;
+    }
+
+    .flex-container > div,
+    .flex-row > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 20px;
+      flex-grow: 1;
+      text-align: center;
+      cursor: move;
+    }
+
+    .grow1 { flex-grow: 1; }
+    .grow2 { flex-grow: 2; }
+    .grow3 { flex-grow: 3; }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 16px;
+      color: #333;
+    }
+
+</style>
+	
 <title>WorshipMusic</title>
 </head>
 <body>
+	<h1>Worship Music</h1>
 	<div id="container">
-	<header><h1>Worship Music</h1></header>
-		<link rel="stylesheet" href="main.css">
-		<nav><ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">Artist</a></li>
-  <li><a href="#contact">Albums</a></li>
-  <li><a href="#contact">Song Lyrics and Chords</a></li>		
-  <li style="float:right"><a class="active" href="#about">About</a></li>
-</ul>
-		</nav>
-		<section>
-		<article class= "left">
-			<form action="">
-			<label for="userName">User Name:</label><br>
-			<input type="text" id="userName" name="userName"><br>	
-			<label for="password">Password:</label><br>
-			<input type="password" id="Password" name="Password"><br>
-			<input type="sumbit" value="sumbit">
-			</form>
-			</article>
-		<article class="center">
-			</article>
-		  <article class="right">
-			<p><a href="index.html">Mac Powell</a></p>
-			  <svg width="400" height="180">
-  <rect x="10" y="10" rx="20" ry="20" width="150" height="150"
-  style="fill:lightgray;stroke:black;stroke-width:5;opacity:0.5" />
-</svg>
-			</article>
-		</section>
-		<footer>Copyright <a href= "index.html">Christina Eller</a>2025</footer><br>
+		<link rel="stylesheet" href="main.css"></div>
+		<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#artist">Songs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+		<section id="home"></section>
+		<div class="image-row">
+  <article class="left">
+	 <a href="https://en.wikipedia.org/wiki/Mac_Powell">
+    <img src="images/IMG_0649.jpeg" alt="Mac Powell"></a> 
+  </article>
+  <article class="center">
+	  <a href="https://en.wikipedia.org/wiki/Jason_Crabb#:~:text=Jason%20Crabb%20%28born%20March%203%2C%201977%29%20is%20an,Artist%22%20at%20the%202000%20Singing%20News%20Fan%20Awards.">
+    <img src="images/jason.jpg" alt="Jason Crabb"></a>
+  </article>
+  <article class="right">
+	  <a href="https://en.wikipedia.org/wiki/Crowder_(musician)">
+    <img src="images/crowder.jpg" alt="Crowder"></a>
+  </article>
+</div>		
+	<table>
+  <caption>Artist Info Table</caption>
+	<tr><th>Artist</th>
+		<th>Genre</th>
+		<th>Albums</th></tr>
+		<tr>
+		 <td>Mac Powell🙌</td>
+		 <td>Christian Rock</td>
+		<td>6</td>
+		</tr>
+		<tr>
+      <td>Jason Crabb🎸</td>
+      <td>Gospel</td>
+      <td>6</td>
+    </tr>
+		<tr>
+      <td>Crowder✍️</td>
+      <td>Worship </td>
+      <td>5</td>
+    </tr>
+	</table>	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/yiihfvUELFs?si=HRWrSyyTgN6m6slA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 		<audio controls>
   <source src="assest/11L-Instrumental_worship-1750896603172.mp3" type="audio/mpeg">
 </audio>
-	</div>
+		<section>
+			<section id="contact"></section>
+		<article class= "left">
+			<form action="">
+				<p><h2>Contact Us!</h2></p>
+			<label for="userName">Your name:</label><br>
+			<input type="text" id="username" name="userName"><br>	
+			<label for="password">Your email:</label><br>
+			<input type="password" id="password" name="Password"><br>
+			<input type="Submit" value="Submit">
+			</form>
+			</article>
+			</section>
+	<header>Songs</header>
+<div class="flex-container">
+    <div class="makeMeStack grow1">Good God Almighty by crowder</div>
+    <div class="makeMeStack grow2">Good time by Mac Powell</div>
+    <div class="makeMeStack grow3">Good morning mercy by Jason Crabb</div>
+  </div>
+  <div class="flex-row">
+   
+    <div class="makeMeStack grow1">Still by Crowder</div>
+	  <div class="makeMeStack grow2">The 99 by Mac Powell</div>
+  </div>
+	<section id="Songs"></section>
+<div class="rectangle">
+ <button onclick="showText()">SONG OF THE DAY</button>
+
+<p id="hiddenText" style="display: none;">
+  GOOD MORNING MERCY BY JASON CRABB
+</p>
+</div>
+	<script>
+    function showText() {
+      document.getElementById("hiddenText").style.display = "block";
+    }
+  </script>
+	
+<script>
+    $(function() {
+      $(".makeMeStack").draggable();
+    });
+  </script>
+	<footer>Copyright Christina Eller 2025</footer>
+	<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
 </body>
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
 </html>
