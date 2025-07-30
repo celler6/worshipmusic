@@ -97,6 +97,7 @@ caption {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
+	color: white;
 }
 
 th,
@@ -104,6 +105,7 @@ td {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
+	color: white;
 }
 
 th {
